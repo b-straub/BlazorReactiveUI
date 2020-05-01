@@ -1,0 +1,13 @@
+﻿@typeparam TItem
+
+<ul style="list-style: square inside;">
+    @foreach (var item in Items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@code {
+    [Parameter]
+    public IEnumerable<TItem> Items { get; set; }
+}

@@ -13,10 +13,7 @@ else if (ViewModel.Numbers.Count == 0)
 }
 else
 {
-    @foreach (var num in ViewModel.Numbers)
-    {
-        <li>@num</li>
-    }
+    <GenericList Items=@ViewModel.Numbers />
 }
 
 <p>

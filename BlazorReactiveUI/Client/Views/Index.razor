@@ -1,4 +1,5 @@
 ﻿@page "/"
-@inherits MyReactiveComponentBase<IndexViewModel>
+@using BlazorReactiveUI.Client.Reactive
+@inherits ReactiveOwningComponentBase<IndexViewModel>
 
 <h2>Value from ViewModel: @ViewModel.Foo</h2>

@@ -10,7 +10,6 @@ namespace BlazorReactiveUI.Client.Views
     {
         public Index()
         {
-            ViewModel = new IndexViewModel();
         }
     }
 }

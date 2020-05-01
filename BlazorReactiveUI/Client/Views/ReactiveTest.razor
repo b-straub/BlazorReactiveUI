@@ -1,0 +1,32 @@
+﻿@page "/reactiveTest"
+@using BlazorReactiveUI.Client.ViewModels
+@using BlazorReactiveUI.Client.Reactive
+@inherits ReactiveOwningComponentBase<ReactiveViewModel>
+
+@if (ViewModel.Numbers == null)
+{
+    <p>Loading...</p>
+}
+else if (ViewModel.Numbers.Count == 0)
+{
+    <p>No numbers...</p>
+}
+else
+{
+    @foreach (var num in ViewModel.Numbers)
+    {
+        <li>@num</li>
+    }
+}
+
+<p>
+    <br />
+    @if (!ViewModel.RunningObservable)
+    {
+        <button class="btn btn-primary" @onclick="ViewModel.StartObservable">Generate numbers</button>
+    }
+    else
+    {
+        <button class="btn btn-danger" @onclick="ViewModel.CancelObservable">Cancel</button>
+    }
+</p>
